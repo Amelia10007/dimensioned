@@ -222,7 +222,7 @@ macro_rules! make_units {
 
             /// Create a new quantity in the $System unit system
             #[inline]
-            pub fn new(v: V) -> Self {
+            pub const fn new(v: V) -> Self {
                 $System { value_unsafe: v, _marker: marker::PhantomData }
             }
         }
